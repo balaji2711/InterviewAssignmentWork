@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.listeners.TestListener"/>
+    <listener class-name="com.listeners.AnnotationTransformer"/>
+  </listeners>
+  <test name="ChromeBrowser(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.flipkarttests.HomeTest">
+        <methods>
+          <include name="verifyAddMostReviewedProductToCart"/>
+          <include name="teardown"/>
+          <include name="afterSuite"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.flipkarttests.HomeTest -->
+    </classes>
+  </test> <!-- ChromeBrowser(failed) -->
+</suite> <!-- Failed suite [Suite] -->

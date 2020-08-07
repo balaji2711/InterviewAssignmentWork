@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.interview.balajiframework</groupId>
+  <artifactId>com.interview.web-automation</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  
+  <dependencies>		
+        <dependency>				
+             <groupId>junit</groupId>								
+             <artifactId>junit</artifactId>								
+             <version>3.8.1</version>								
+             <scope>test</scope>								
+        </dependency>        
+        
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm-deps</artifactId>
+            <version>1.0.5</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>1.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<!-- 2.41.1 -->
+		<!-- http://extentreports.com/docs/versions/2/java/ -->
+		<dependency>
+		    <groupId>com.relevantcodes</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>2.41.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>javax.mail-api</artifactId>
+		    <version>1.5.1</version>
+		</dependency>
+						
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>1.3.2</version>
+		</dependency>
+		        	        	
+        <dependency>				
+            <groupId>org.seleniumhq.selenium</groupId>								
+            <artifactId>selenium-java</artifactId>								
+            <version>3.8.1</version>								
+		</dependency>	
+							
+        <dependency>	<!-- 6.8 -->			
+            <groupId>org.testng</groupId>								
+            <artifactId>testng</artifactId>								
+            <version>6.11</version>
+            <scope>test</scope>							            							  		
+       </dependency>          
+       </dependencies>
+       
+       <build>
+       <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>          
+          <fork>true</fork>
+                <executable>C:\Program Files\Java\jdk1.8.0_101\bin\javac.exe</executable>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20.1</version>
+        <inherited>true</inherited>        
+        <configuration>
+       <suiteXmlFiles>
+       <suiteXmlFile>testng.xml</suiteXmlFile>
+       </suiteXmlFiles>
+        </configuration>
+      </plugin>	
+    </plugins>		           
+       </build>       
+</project>
